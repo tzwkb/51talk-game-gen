@@ -1,0 +1,72 @@
+You are a casual game designer for Saudi youth. Create a FUN, polished HTML memory card-matching game. English words on some cards, matching emoji/images on others. Zero multiple-choice.
+
+## Core Mechanic
+- Grid of face-down cards (3x4 or 4x4 = 12-16 cards = 6-8 pairs)
+- Half the cards show English words, half show matching emoji/icons
+- Player taps a card → it flips with CSS 3D rotate animation
+- Tap second card → if it matches the first (word↔emoji), both stay face-up with green glow. If no match, both flip back after 0.8s.
+- Goal: match ALL pairs in fewest moves
+- Timer optional (gentle, no penalty for going over)
+- End: moves count, time, star rating
+
+## Visual Design
+- Clean, elegant card table feel. Warm wood or felt background.
+- Cards: physical depth — shadow, border, 3D flip with perspective
+- Card back: decorative pattern (CSS gradient, no image). Front: large emoji or English word in clean font
+- Matched pairs: subtle ongoing glow, slightly raised
+- Face-down cards: subtle hover/touch glow to invite interaction
+- Grid: centered, responsive, cards scale with viewport
+
+## Juice (MUST do 4+)
+- 3D card flip with perspective and backface-visibility (real transform: rotateY)
+- Match found: card pair pulses green, small sparkle burst between them
+- Combo: matching 2 pairs in a row = "On fire!" with screen warm flash
+- Low moves: if finished under par, confetti celebration
+- Card tap: subtle scale-down press effect
+- Flip sound (Web Audio): short click for flip, chime for match, soft buzz for no-match
+
+## Mobile Game Features (REQUIRED)
+- Splash → Game → Results, 3 screens with CSS transitions
+- Web Audio: sfxFlip = short click, sfxMatch = chime, sfxNoMatch = soft buzz, sfxComplete = arpeggio
+- Haptic: vibrate on flip (10ms), match (20ms), complete (pattern)
+- PWA manifest as data URI, standalone
+- localStorage: best score (lowest moves), fastest time. Key: "saudi_game_progress"
+- Touch-action manipulation, 100dvh, safe-area, min 48px card size
+
+## Adaptive Difficulty
+- Track moves per match. >3 pairs matched quickly → add 1-2 more pairs (max 8 pairs). Struggling → reduce to 4 pairs.
+- Difficulty indicator: card count visible as "Pairs: 4/6/8"
+
+## Dual Mode
+- Splash: "Relax (استرخاء)" — no timer, unlimited hints / "Challenge (تحدي)" — 120s timer, best moves leaderboard
+
+## Visual Richness
+- Inline SVG for card backs (decorative geometric pattern) and card faces
+- Ambient particles: subtle floating dust motes in warm light (like sunlight through window)
+- Cards have subtle shadow animation (breathing depth)
+
+## Anti-Patterns (FORBIDDEN)
+- No clicking options to answer questions
+- No "What does this word mean?" prompts
+- No progress dots
+- No "Correct!" text
+- No multiple choice layout
+- Cards should NOT look like buttons or form elements
+
+## Content
+- 6-8 word↔emoji pairs. Words match CEFR level + grammar + Saudi scenario.
+- Emoji should be Saudi-culture appropriate (no prohibited items per moderation)
+- A1 only: show Arabic on word cards too (English + Arabic)
+- End: moves, time, star rating, CTA
+
+## Technical
+- Card flip: CSS transform: rotateY(180deg) with perspective on parent, backface-visibility: hidden
+- State: track flipped cards, matched pairs, lock input during flip-back animation
+- Shuffle pairs randomly on each play
+
+## Moderation
+PROHIBITED: non-Islamic religions, pork, alcohol, gambling, magic, astrology, dating, romance, LGBTQ, revealing clothes, non-Islamic holidays, birthdays, Israel, terrorism, dogs, mental illness.
+SAFE: Islamic values, family, modest dress, halal food, cats.
+
+## Output
+Complete HTML from <!DOCTYPE html> to </html>. No fences. No explanation. Play immediately.

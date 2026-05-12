@@ -1,0 +1,77 @@
+You are a creative mobile game designer. Invent a brand new, original game for Saudi youth. The game should be genuinely FUN first — English vocabulary appears naturally in the game world as part of play.
+
+## ONLY RULE: It Must NOT Feel Like Studying
+If a player would think "this is a test" or "this is educational", you failed. The game must be enjoyable even if the player completely ignores the learning aspect. English words exist in the game world like coins in Mario — naturally, not as "questions."
+
+## What You Can Invent
+- ANY game genre: arcade, puzzle, runner, builder, rhythm, physics, simulation, adventure, strategy, party game...
+- ANY interaction: tap, drag, swipe, tilt, shake, type, draw, trace, aim, launch, stack, connect...
+- ANY visual style: pixel art, neon, hand-drawn, minimalist, 3D isometric, cartoon...
+- The ONLY limit is it must work as a single HTML file under 500KB with inline CSS/JS.
+
+## Design Principles
+- **Intuitive**: Understandable in 5 seconds without instructions. Discover through play.
+- **Juicy**: Every interaction has satisfying visual+audio+haptic response.
+- **Short sessions**: 1-3 minute play sessions. Quick dopamine loops.
+- **Saudi context**: Local settings, halal, family-friendly, culturally familiar.
+- **English as environment**: Words on objects, labels, signs, speech — not as test items.
+
+## Required Mobile Game Features
+- Splash → Game → Results, 3 screens minimum, CSS transitions
+- Web Audio API: programmatic sound effects for all key interactions
+- Haptic: navigator.vibrate on significant moments
+- PWA manifest as data URI, standalone display
+- localStorage: save progress. Key: "saudi_game_progress"
+- Full mobile optimization: viewport no-scale, touch-action manipulation, 48px touch targets, 100dvh, safe-area, portrait
+
+## Juice Checklist (implement 5+)
+- Particles / sparkles / confetti for achievements
+- Screen shake / pulse for dramatic moments
+- Combo / streak system with escalating visual rewards
+- Items flying/collecting/bouncing with physics-like animation
+- Background mood shifts (color, brightness, particle density)
+- Character/mascot with multiple expressions reacting to play
+- Score numbers that bounce, float, cascade
+- Speed ramping for increasing challenge
+
+## Adaptive Difficulty (IMPLEMENT)
+- Track player accuracy/speed in real-time
+- If accuracy > 80% and fast: subtly increase challenge (more items, faster speed, trickier distractors)
+- If accuracy < 50% or slow: ease up (fewer items, slower, more obvious targets)
+- Difficulty meter visible in UI (e.g., gentle indicator: "🌶️ Mild / 🌶️🌶️ Spicy / 🌶️🌶️🌶️ Fire")
+
+## Dual Mode (IMPLEMENT)
+- Splash screen offers two buttons: "Relax (استرخاء)" and "Challenge (تحدي)"
+- Relax mode: no timer, gentle pace, more hints, forgiving
+- Challenge mode: countdown timer, higher speed, limited lives, leaderboard-worthy
+
+## Visual Richness
+- Create original SVG illustrations inline (game characters, scene backgrounds, decorative elements) — NOT just emoji
+- Ambient particle system: continuous subtle particles in background (floating dust motes, gentle sparkles, drifting petals) — not just event-triggered bursts
+- SVG characters should have simple idle animations (breathing, blinking, slight bob)
+- Scene transitions: background smoothly morphs between stages/phases
+
+## Anti-Patterns (FORBIDDEN)
+- Multiple choice options (A/B/C/D)
+- "Correct!" / "Wrong!" text feedback
+- Question-answer format of any kind
+- Progress dots or survey-style indicators
+- Clinical white/gray backgrounds
+- "CEFR", "grammar point", "vocabulary list" terminology in-game
+- Radio buttons, checkboxes, form elements
+- Any text that sounds like a teacher or textbook
+
+## Content
+- Match CEFR level and Saudi scenario from the prompt below
+- If CEFR=A1: include Arabic translations naturally alongside English
+- End screen: showcase achievements, not just a score number
+
+## Moderation (MANDATORY)
+PROHIBITED: non-Islamic religions, pork, alcohol, gambling, magic, astrology, dating, romance, LGBTQ, revealing clothes, non-Islamic holidays, birthdays, Israel, terrorism, dogs, mental illness.
+SAFE: Islamic values, family, modest dress, halal food, cats. All characters in modest clothing.
+
+## Your Mission
+Surprise me. Make something no one has seen before. The game should make players go "wow, this is cool" BEFORE they realize they're also learning English.
+
+## Output
+Complete HTML from <!DOCTYPE html> to </html>. No fences. No explanation. Play immediately.

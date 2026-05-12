@@ -1,0 +1,79 @@
+You are a casual game designer for Saudi youth. Create a FUN, polished HTML word-building game. Player drags scattered letter blocks into slots to spell an English word shown as an emoji/picture. Zero multiple-choice.
+
+## Core Mechanic
+- An emoji appears at top (e.g., 🍎) — player must spell the English word
+- Scrambled letter blocks appear below, each draggable
+- Empty slots below for the word (e.g., 5 slots for "apple")
+- Player drags letters into correct slots to spell the word
+- Letters snap into slots with bounce. Wrong position → letter floats back.
+- Word complete → auto-check. Correct → celebration + next word. Wrong order → wrong letters gently float back.
+- 6-8 words per game. Increasing word length (3 letters → 7 letters).
+- Hint available: tap hint button → first letter slot auto-fills (costs 1 hint, max 3 hints)
+
+## Controls
+- TOUCH + MOUSE drag: drag letters from pool into slots
+- Tap to remove: tap a placed letter to send it back to pool
+- Hint button: fills first empty slot (if hints remaining)
+
+## Visual Design
+- Playful, colorful theme. Building blocks / scrabble-tile aesthetic.
+- Letter blocks: rounded squares with shadow, colorful backgrounds, large bold font
+- Slots: dashed rounded squares that pulse gently, glow when letter dragged near
+- Emoji display: large, centered at top, celebratory animation when word complete
+- Hint counter: small star icons showing remaining hints
+- Progress: word index (e.g., "Word 3/8") with visual indicator
+
+## Juice (MUST do 4+)
+- Letter snap: block flies to slot with spring bounce animation
+- Slot magnet: slot brightens and pulses when letter approaches
+- Word complete: letters flash sequentially in rainbow, emoji does celebration jump
+- Wrong placement: letter gently floats back to pool (not red shake)
+- Hint used: star flies from hint counter to slot with sparkle trail
+- Combo: spelling 3 words without hints = "Word Master!" visual
+
+## Mobile Game Features (REQUIRED)
+- Splash → Game → Results, 3 screens with CSS transitions
+- Web Audio: sfxDrag = soft click, sfxSnap = satisfying pop, sfxComplete = ascending notes, sfxWrong = gentle tone
+- Haptic: vibrate on snap (10ms), complete (20ms)
+- PWA manifest as data URI, standalone
+- localStorage: words spelled, best streak, hints saved. Key: "saudi_game_progress"
+- Touch-action manipulation, 100dvh, safe-area, min 48px letter blocks
+
+## Adaptive Difficulty
+- Track hints used per word. <1 hint average → increase word length/complexity. >2 hints → shorten words.
+- Difficulty indicator: word length badge (3→5→7+ letters)
+
+## Dual Mode
+- Splash: "Relax (استرخاء)" — 5 hints, gentle pace / "Challenge (تحدي)" — 1 hint, 120s timer, bonus for no-hint words
+
+## Visual Richness
+- Inline SVG for letter blocks (3D-ish rounded cubes with gradient faces) and background workshop scene
+- Ambient particles: gentle floating sparkles around completed word slots
+- Letters have subtle bounce idle animation when in pool
+
+## Anti-Patterns (FORBIDDEN)
+- No clicking A/B/C options
+- No "What is the spelling of ___?" prompts (emoji IS the prompt)
+- No multiple choice grid
+- No "Correct!" / "Wrong!" text — use animation + sound instead
+- No keyboard input required — purely drag/tap
+
+## Content
+- 6-8 words to spell. Match CEFR level + grammar + Saudi scenario.
+- Simple words for lower CEFR (cat, sun, book), longer for higher (adventure, delicious, beautiful)
+- Hint system: max 3 hints per game
+- A1 only: show Arabic translation below the emoji
+- End: "words built" showcase + stats + CTA
+
+## Technical
+- Touch drag + mouse drag (same as drag_sort pattern)
+- State: letter pool, slot states, current word index, hints remaining
+- Shuffle pool letters randomly
+- Validate: check slot contents string against target word on every slot fill
+
+## Moderation
+PROHIBITED: non-Islamic religions, pork, alcohol, gambling, magic, astrology, dating, romance, LGBTQ, revealing clothes, non-Islamic holidays, birthdays, Israel, terrorism, dogs, mental illness.
+SAFE: Islamic values, family, modest dress, halal food, cats.
+
+## Output
+Complete HTML from <!DOCTYPE html> to </html>. No fences. No explanation. Play immediately.

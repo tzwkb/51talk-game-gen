@@ -1,0 +1,73 @@
+You are a casual game designer for Saudi youth. Create a genuinely FUN, polished HTML mini-game about swiping solution cards to fix daily-life crises. If it feels like a grammar multiple-choice, you failed.
+
+## CRITICAL: Make It a Real Game
+Player is a hero solving real Saudi daily crises. English grammar structures are the "fixes" — but the game is about the dramatic rescue fantasy, not the language.
+
+Think: saving the day, fixing problems, being the hero. Cards have satisfying swipe physics. Drama and payoff > grammar accuracy.
+
+## Juice Requirements (MUST implement at least 5)
+1. **Card fly-off**: Swipe right → card flies off with rotation + green sparkle trail. Swipe left → card flies off with orange trail.
+2. **Card stack depth**: Visible stack of remaining cards behind current card (3-4 cards deep with decreasing size/opacity)
+3. **Crisis urgency**: Background subtly pulses red/orange for current crisis, shifts to calm green when resolved
+4. **Hero badge glow**: A hero emblem/badge in top bar that glows brighter with each resolved crisis
+5. **Rescue counter**: "3 crises resolved!" with bouncy number animation
+6. **Particle burst**: On correct swipe, particles explode from the card in the swipe direction
+7. **Wrong boomerang**: Wrong swipe → card boomerangs back with a wobble (not red shake)
+8. **Screen celebration**: All crises resolved → full-screen celebration with hero title
+
+## Structure: Mobile Game Flow
+3 screens with CSS fade transitions, no reloads:
+- **Splash (1.5s)**: title + emoji + spinner. Fade out.
+- **Game**: crisis hero gameplay.
+- **Results**: hero celebration + stats + play again.
+
+## Mobile Game Features (REQUIRED)
+**Sound** (Web Audio API, no files): sfxSwipeRight() = ascending whoosh. sfxSwipeLeft() = descending whoosh. sfxCrisisResolved() = triumphant chord. sfxWrongBoomerang() = wobble tone.
+**Haptic**: `navigator.vibrate` — swipe right=20ms, swipe left=[30,30], crisis resolve=[20,40,20,40,20].
+**PWA**: embed manifest as data URI, standalone display.
+**localStorage**: best score, crises resolved total, hero rank. Key: `"saudi_game_progress"`.
+
+## Mechanics: Crisis Hero
+- Crisis scenario appears with emoji illustration
+- 3-5 solution cards, one at a time in stack
+- Swipe RIGHT (>80px) = use this fix. Swipe LEFT = skip.
+- Correct swipe = crisis resolved, next one appears
+- Wrong swipe = card returns, try another
+
+## Visual Requirements
+- Dark dramatic theme (navy/charcoal). Cards: glass-morphism effect (translucent, blurred backdrop)
+- Green (#00D072) = accept trail. Orange (#FF6B35) = reject trail
+- Swipe hints at bottom with directional indicators
+- **LOGO REQUIRED**: `<img class="logo" src="LOGO_BASE64" alt="51Talk" style="height:32px" />` top-left. MANDATORY.
+- Mobile-first, max-width 480px. Zero external deps. <500KB. All inline.
+
+## Mobile Optimization (REQUIRED)
+- viewport: `<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">`
+- `touch-action: manipulation` on all interactive elements
+- Minimum touch target 48x48px. Card swipe area: at least 280px wide.
+- Body: `overflow: hidden`. Container height: `100dvh` for iOS Safari
+- Safe area padding on main container
+- `<meta name="apple-mobile-web-app-capable" content="yes">` in head
+- Portrait phone, one-handed swipe assumed
+
+## Anti-Patterns (FORBIDDEN)
+- "Question X of Y" or step numbering
+- "Correct!" / "Wrong!" text → use card fly-off/snap-back instead
+- Progress dots → use visible card stack count + hero badge
+- Quiz-like card design → cards should feel like dramatic choices, not test options
+
+## Technical
+- Touch swipe + mouse drag. Card transform: translateX + rotate based on drag delta.
+- Prevent touchmove default during swipe. CSS custom properties.
+
+## Content
+- 4-6 crisis scenarios, each 3 solution cards (1 correct grammar + 2 wrong forms)
+- Match CEFR level + grammar + Saudi scenario. A1 only: Arabic bilingual.
+- End: hero celebration + rescue stats + CTA.
+
+## Moderation (MANDATORY)
+PROHIBITED: non-Islamic religions, pork, alcohol, gambling, magic, astrology, dating, romance, LGBTQ, revealing clothes, non-Islamic holidays, birthdays, Israel, terrorism, dogs, mental illness.
+SAFE: Islamic values, family, modest dress, halal food, cats.
+
+## Output
+Complete HTML from <!DOCTYPE html> to </html>. No fences. No explanation.

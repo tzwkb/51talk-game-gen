@@ -1,0 +1,71 @@
+You are a casual game designer for Saudi youth. Create a FUN, polished HTML arcade game about catching falling English words. This is an ACTION game — zero multiple-choice elements.
+
+## Core Mechanic
+- English words FALL from the top of the screen (like rain/fruit)
+- Player controls a basket/character at the bottom, moving LEFT/RIGHT
+- Among the falling words, only SOME match the target (shown at top: an emoji + category hint)
+- Catch correct words → score +10, sparkle burst, item flies into collection
+- Miss or catch wrong word → nothing happens (or gentle wobble), just keep playing
+- Speed gradually increases (easy start, challenging finish)
+- 60-90 second rounds. End: total caught, accuracy%, celebration
+
+## Controls (NO clicking on options)
+- Touch: hold and drag left/right anywhere on screen to move the basket
+- Mouse: move mouse left/right, basket follows
+- OR: tilt/accelerometer if available (DeviceOrientation) — but touch drag is primary
+- Basket smoothly follows input with lerp/easing (not instant snap)
+
+## Visual Design
+- Arcade feel: colorful, energetic, neon or bright palette
+- Falling words: styled as physical objects (rounded pills/tags with shadow, slight wobble)
+- Basket: large emoji or styled div at bottom, wide catch zone
+- Target indicator at top: shows what to catch (emoji + category, e.g., "🍎 Fruit words!")
+- Background: gradient or subtle pattern, maybe scrolling stars/particles
+- Juice: particles on catch, screen flash on streak, basket glow when catching
+
+## Juice (MUST do 4+)
+- Words wobble/rotate slightly as they fall
+- Catch: word bursts into sparkle particles, "+10" floats up and fades
+- Streak: 3-in-a-row = basket glows, 5-in-a-row = rainbow trail, 8-in-a-row = screen celebration
+- Miss correct word: it falls off screen, tiny sad particle
+- Speed ramp: first 15s slow, then gradually faster — visible "speed gauge"
+
+## Mobile Game Features (REQUIRED)
+- Splash → Game → Results, 3 screens with CSS transitions
+- Web Audio: sfxCatch = ascending pop, sfxMiss = low blip, sfxCombo = arpeggio, sfxSpeedUp = rising tone
+- Haptic: vibrate on catch (15ms), combo (30ms), speed-up (50ms)
+- PWA manifest as data URI, standalone display
+- localStorage: high score, total caught, best streak. Key: "saudi_game_progress"
+- Touch-action manipulation, 100dvh, safe-area, min 48px touch zone for control area
+
+## Adaptive Difficulty
+- Track catch accuracy in real-time. >80% → speed up + more decoy words. <50% → slow down + fewer decoys.
+- Difficulty indicator: "🌶️ Mild / 🌶️🌶️ Spicy / 🌶️🌶️🌶️ Fire"
+
+## Dual Mode
+- Splash: "Relax (استرخاء)" — no timer, gentle pace / "Challenge (تحدي)" — 90s countdown, escalating speed, high score chase
+
+## Visual Richness
+- Inline SVG for basket, falling words (rounded pill shape with gradient), and background scene
+- Ambient particles: floating sparkles or drifting shapes in background continuously
+- Words have subtle idle animation (gentle wobble, slight rotation)
+
+## Anti-Patterns (FORBIDDEN)
+- No clicking on options/buttons to answer
+- No "What is the correct word for ___?" prompts
+- No progress dots
+- No "Correct!" / "Wrong!" text
+- No multiple choice grid
+
+## Content
+- Word pool: 12-20 words matching CEFR level + grammar + Saudi scenario
+- Target changes every 8-10 seconds (show new emoji/category at top)
+- A1 only: show Arabic translation alongside English word on falling items
+- End: accuracy stats + "words caught" gallery + CTA
+
+## Moderation
+PROHIBITED: non-Islamic religions, pork, alcohol, gambling, magic, astrology, dating, romance, LGBTQ, revealing clothes, non-Islamic holidays, birthdays, Israel, terrorism, dogs, mental illness.
+SAFE: Islamic values, family, modest dress, halal food, cats.
+
+## Output
+Complete HTML from <!DOCTYPE html> to </html>. No fences. No explanation. Play immediately.

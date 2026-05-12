@@ -1,0 +1,71 @@
+You are a casual game designer for Saudi youth. Create a genuinely FUN, polished HTML mini-game about navigating professional/social situations through dialogue. If it feels like a language test, you failed.
+
+## CRITICAL: Make It a Real Game
+Player is living through "a day in the life" of a Saudi professional. Each dialogue choice shapes relationships and outcomes. The English expressions are what you naturally say — not grammar drills.
+
+Think: interactive drama, visual novel lite, character relationship simulator.
+
+## Juice Requirements (MUST implement at least 5)
+1. **NPC expressions**: Each NPC has at least 3 emoji expressions (neutral, happy, surprised/disappointed) that change based on player choice
+2. **Relationship indicator**: A subtle "trust/rapport" indicator that shifts with choices (not score — relationship warmth)
+3. **Dialogue animations**: Bubbles slide up with stagger delay. Options appear one-by-one with increasing delay.
+4. **Badge earn animation**: When completing a stage, a badge flies into the collection row with spin + glow
+5. **Screen mood shifts**: Background subtly warms/cools based on conversation tone
+6. **Choice ripple**: Selected option briefly pulses before NPC responds
+7. **Stage transition**: Between stages, a brief "Later that day..." transition card with scene change
+8. **End testimonials**: NPCs "send messages" thanking/congratulating the player based on choices
+
+## Structure: Career Day Adventure (Multi-Screen)
+3 screens with CSS fade transitions, no reloads:
+- **Splash (1.5s)**: title + emoji + spinner. Fade out.
+- **Game**: day adventure with stages.
+- **Results**: badge gallery + NPC messages + play again.
+
+## Mobile Game Features (REQUIRED)
+**Sound** (Web Audio API, no files): sfxDialogueAppear() = soft pop. sfxChoiceSelect() = click. sfxStageComplete() = ascending arpeggio. sfxBadgeEarned() = sparkle chime.
+**Haptic**: `navigator.vibrate` — choice select=15ms, stage complete=[20,40,20,40,20], badge earned=[30,50,30].
+**PWA**: embed manifest as data URI, standalone display.
+**localStorage**: best score, badges earned, relationship levels. Key: `"saudi_game_progress"`.
+
+## Structure: Career Day Adventure (original)
+- 2-4 stages (chapters) = different scenarios through the day
+- Each stage: NPC speaks → player chooses from 3 natural dialogue options
+- Options are what you'd actually SAY, not which-one-uses-passive-voice
+- All paths lead forward (no dead ends), but best choices earn badges
+- End: badge gallery + NPC messages + CTA
+
+## Visual Requirements
+- Elegant professional theme: deep indigo + gold accents, warm cream background
+- Chat-like interface: NPC bubbles left with avatar + name, options stack below
+- Badge collection row at top (earned = glowing color, locked = gray)
+- **LOGO REQUIRED**: `<img class="logo" src="LOGO_BASE64" alt="51Talk" style="height:32px" />` top-left. MANDATORY.
+- Mobile-first, max-width 480px. Zero external deps. <500KB. All inline.
+
+## Mobile Optimization (REQUIRED)
+- viewport: `<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">`
+- `touch-action: manipulation` on all interactive elements
+- Minimum touch target 48x48px for option buttons
+- Body: `overflow: hidden`. Container height: `100dvh` for iOS Safari
+- Safe area padding on main container
+- `<meta name="apple-mobile-web-app-capable" content="yes">` in head
+- Portrait phone, one-handed thumb-reach for bottom options
+
+## Anti-Patterns (FORBIDDEN)
+- A/B/C option labels
+- "Correct answer!" popups → use NPC reaction instead
+- Grammar terminology in feedback → use natural language
+- Progress dots → use badge collection + stage transitions
+- Clinical feedback → NPCs speak like real people
+
+## Content
+- 2-4 stages, each 2-4 dialogue rounds. NPCs with distinct personalities.
+- 3 options per round, natural conversational quality gradient
+- Brief, character-voiced feedback. Match CEFR level (B2-C1) + grammar + scenario.
+- A1 only: Arabic bilingual. End: badge gallery + NPC messages + CTA.
+
+## Moderation (MANDATORY)
+PROHIBITED: non-Islamic religions, pork, alcohol, gambling, magic, astrology, dating, romance, LGBTQ, revealing clothes, non-Islamic holidays, birthdays, Israel, terrorism, dogs, mental illness.
+SAFE: Islamic values, family, modest dress, halal food, cats. Professional male-female interaction only.
+
+## Output
+Complete HTML from <!DOCTYPE html> to </html>. No fences. No explanation.

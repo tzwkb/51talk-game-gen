@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+output/
+config.py
+logo_b64.txt
+_tmp_*

@@ -1,43 +1,7 @@
 # Saudi English Game Generator
 
-<!-- bilingual-readme:start -->
+中文 | [English](README_EN.md)
 
-## 双语说明 / Bilingual Documentation
-
-> 本节提供整篇 README 的中英双语维护说明；下方保留原始详细说明、命令、路径和配置示例。
-> This section provides bilingual maintenance notes for the full README; the original detailed notes, commands, paths, and configuration examples are preserved below.
-
-### 中文
-
-**概览**：AI 驱动的 51Talk 英语学习小游戏生成器，用于快速生成可交付的 HTML 互动游戏。
-
-**主要能力**：
-- 围绕 51Talk 课程主题生成小游戏内容。
-- 输出可在浏览器中运行的 HTML 游戏。
-- 面向快速生产与交付，而不是通用游戏引擎。
-
-**使用方式**：按仓库中的 CLI/脚本说明准备课程输入和 API 配置后运行生成流程。
-
-**状态**：该仓库仍按当前 README 的说明维护或使用。
-
-**注意事项**：下方原始说明保留具体命令、文件名和生成流程。
-
-### English
-
-**Overview**: AI-powered 51Talk English-learning game generator for producing deliverable HTML mini-games quickly.
-
-**Key capabilities**:
-- Generates mini-game content around 51Talk lesson themes.
-- Outputs browser-runnable HTML games.
-- Designed for fast production and delivery rather than as a general game engine.
-
-**Usage**: Prepare lesson input and API configuration as described below, then run the repository scripts or CLI workflow.
-
-**Status**: This repository is maintained or used according to the current README notes.
-
-**Notes**: The original notes below keep the exact commands, file names, and generation workflow.
-
-<!-- bilingual-readme:end -->
 
 AI 驱动的 HTML 英语学习小游戏自动生产。终端两键出游戏。
 

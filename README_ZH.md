@@ -1,7 +1,9 @@
 # Saudi English Game Generator
 
-[English](README.md) | 中文
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 
+[English](README.md) | 中文
 
 AI 驱动的 HTML 英语学习小游戏自动生产。终端两键出游戏。
 

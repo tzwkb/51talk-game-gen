@@ -36,12 +36,12 @@ python generate.py
 
 ```
 game_gen/
-├── prompts/         # 7 套 AI System Prompt
-├── output/          # 生成的 HTML 文件
-├── generate.py      # CLI 入口
-├── templates.py     # 游戏类型 + 难度 + 响应式配置
-├── validator.py     # 文件校验
-└── config.py        # API 配置
+├── prompts/         # 7 AI system prompts
+├── output/          # generated HTML files
+├── generate.py      # CLI entry point
+├── templates.py     # game type + difficulty + responsive config
+├── validator.py     # file validation
+└── config.py        # API configuration
 ```
 
 ## Detailed Technical Notes

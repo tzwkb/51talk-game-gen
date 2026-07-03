@@ -19,10 +19,6 @@ English | [中文](README_ZH.md)
 
  Prepare lesson input and API configuration as described below, then run the repository scripts or CLI workflow.
 
-## Status
-
- This repository is maintained or used according to the current README notes.
-
 ## Notes
 
  The original notes below keep the exact commands, file names, and generation workflow.
@@ -45,7 +41,3 @@ game_gen/
 ├── validator.py     # file validation
 └── config.py        # API configuration
 ```
-
-## Detailed Technical Notes
-
-This README keeps the English version of the core documentation. Code blocks, paths, commands, and file-layout examples are kept literal so they can be copied and checked against the repository.

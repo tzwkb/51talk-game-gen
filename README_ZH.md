@@ -1,6 +1,6 @@
 # Saudi English Game Generator
 
-中文 | [English](README.md)
+[English](README.md) | 中文
 
 
 AI 驱动的 HTML 英语学习小游戏自动生产。终端两键出游戏。
